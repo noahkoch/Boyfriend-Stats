@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+development:
+  <<: *default
+  database: bfstats_development
+
+test:
+  <<: *default
+  database: bfstats_test
+
+production:
+  <<: *default
+  database: bfstats 
+  username: bfstats 
+  password: <%= ENV['KOOMENADE_DATABASE_PASSWORD'] %>#
