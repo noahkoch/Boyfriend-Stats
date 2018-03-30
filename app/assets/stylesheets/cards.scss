@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Wannabees';
-  src: url('wannabees.ttf') format('truetype');
+  font-family: 'Yellowtail';
+  src: url('yellowtail.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,11 +15,12 @@
   }
 
   .card-body{
-    font-family: "Wannabees";
+    font-family: "Yellowtail";
     background: #bbbbbb;
     bottom: 0;
     padding: 0;
     padding-top: 1.25rem;
+    text-align: center;
   }
 }
 

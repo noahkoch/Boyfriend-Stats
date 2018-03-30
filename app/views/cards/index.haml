@@ -1,27 +1,4 @@
 .row
-  .col-4
-    .flip-container
-      .flipper
-        .front
-          .card.trading-card
-            %img.card-img-top{src: "/very-handsome.jpg", alt: "Card image cap"}
-            .card-body
-              %h5.card-title Noah "Viper Lightning" Kochanowicz 
-        .back
-          .card.trading-card
-            %ul.list-group
-              %li.list-group-item 
-                %b Brothers
-                2
-              %li.list-group-item 
-                %b Words Per Minute
-                74 
-              %li.list-group-item 
-                %b Hockey 
-                No 
-              %li.list-group-item 
-                %b Watches Hockey 
-                When it's on in the bar 
-              %li.list-group-item 
-                %b Pizza Per Minute 
-                2 
+  - Card.all.each do |card|
+    .col-4
+      = render partial: "card", locals: { card: card }

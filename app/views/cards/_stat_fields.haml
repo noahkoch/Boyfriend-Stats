@@ -1,0 +1,7 @@
+.nested-fields
+  .form-row
+    .col
+      = f.text_field :title, class: "form-control", placeholder: "Title"
+    .col
+      = f.text_field :value, class: "form-control", placeholder: "Value"
+  = link_to_remove_association "remove stat", f

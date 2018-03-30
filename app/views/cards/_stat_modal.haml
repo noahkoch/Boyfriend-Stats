@@ -1,0 +1,24 @@
+#exampleModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      = form_for Card.new do |f|
+        .modal-header
+          %h5#exampleModalLabel.modal-title New Stat Card 
+          %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+            %span{"aria-hidden" => "true"} ×
+        .modal-body
+          .form-group
+            = f.label :display_name
+            = f.text_field :display_name, class: "form-control"
+          .form-group
+            = f.label :image_url
+            = f.text_field :image_url, class: "form-control"
+            %h3 Stats 
+            #stats
+              = f.fields_for :stats do |stat|
+                = render 'stat_fields', f: task
+              .links
+                = link_to_add_association 'add stat', f, :stats
+        .modal-footer
+          %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
+          = f.submit "Create", class: "btn btn-primary"
