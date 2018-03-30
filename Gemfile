@@ -15,6 +15,8 @@ group :production do
   gem 'therubyracer', platforms: :ruby
 end
 
+gem 'haml' 
+gem 'haml-rails' 
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
